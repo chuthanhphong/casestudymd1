@@ -1,0 +1,50 @@
+.calculator {
+    width: 100%;
+    height: 20%;
+}
+.text {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    color: red;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(https://lh3.googleusercontent.com/proxy/ruQcIdS2C6SoyZJ760L95ZMjMS-JUO4OOsAEX0wKPwr5EqPppCHT1tq6anV21iowB8oBiTciNRIddEcUDSbHjOzRbil1cqbMP0_0HpIifHim_QxSo4ESF8fRWyJxv1zdvrSjx4f6NFhgO9WnFpRbncDAy0vqSvoFcnv9rE4-TwiTfjfwxrc-3-dHQ41OSF61LycMN7ELkyGYJ1OitdlSF_Psh40tcCyzBuRfoQMpgPPMUeXxfbZq5J-mNy2Tq0oaq0BAh7-2C9VgeHmuY6y5);
+}
+
+.clip-text:before {
+    content: "";
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: revert;
+    position: absolute;
+}
+
+.clip-text:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: silver;
+}
+
+.clip-textGif {
+    background-image: url(https://anhdepfree.com/wp-content/uploads/2020/05/anh-dep-dong-gif.gif);
+    text-transform: uppercase;
+    font-style: italic
+}
+body{
+    background-image: url("https://cdn.tgdd.vn/hoi-dap/812154/Ung-dung-hinh-nen-dep-Android-(159).jpg");
+    background-size: cover;
+}

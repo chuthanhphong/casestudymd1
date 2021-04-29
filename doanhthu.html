@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doanh Thu </title>
+    <link rel="stylesheet" href="manhinhsanpham.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="manhinhdoanhthu.css">
+    <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="doanhthu.js"></script>
+</head>
+<body>
+    <div class="text clip-text clip-textGif">Trang Báo Cáo Doanh Thu </div>
+<table border="1px" id="baocao" width="100%">
+</table>
+<div id='thaydoi'>
+</div>
+<img style="cursor: pointer" src="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/72/Actions-list-add-icon.png"
+     onclick="addnew()" value="add"/></i>
+ <img src="https://icons.iconarchive.com/icons/wineass/ios7-redesign/72/Calculator-icon.png"style="cursor: pointer" onclick="tongdoanhthu()"></i>
+
+<script>
+    let total = function (name, cost, soluong, tondong, doanhthu) {
+        this.name = name;
+        this.cost = cost;
+        this.soluong = soluong;
+        this.tondong = tondong;
+        this.doanhthu = doanhthu;
+    }
+    let list = [];
+    let pro = new total('Vinamilk', 19000, 200, 5, 300000);
+    let pro1 = new total('Cô Gái Hà Lan', 20000, 180, 5, 500000);
+    let pro2 = new total('Milo', 19000, 170, 5, 540000);
+    let pro3 = new total('Ovantine', 25000, 190, 5, 250000);
+    let pro4 = new total('Vinamilk', 24000, 220, 5, 152000);
+    list.push(pro, pro1, pro2, pro3, pro4);
+    display()
+
+    function display() {
+        let tt = '<caption style="background-color:pink"> <h1>Doanh Thu Tháng 3 Năm 2021 </h1> </caption>' +
+            `<tr>
+                <th> Tên Sản Phẩm </th>
+                 <th>Giá Thành</th>
+                  <th>Số Lượng</th>
+                   <th>Tồn Đọng</th>
+                    <th>Doanh Thu</th>
+                    <th>Chỉnh Sửa</th>
+                     <th>Tính toán</th>
+                      <th>Ghi chú</th>
+</tr>`
+        ;
+        for (i = 0; i < list.length; i++) {
+            tt += `<tr>
+                    <td><p id="name"></p>${list[i].name}</td>
+                    <td><p id="cost"></p>${list[i].cost}</td>
+                    <td><p id="soluong"></p>${list[i].soluong}</td>
+                    <td><p id="tondong"></p>${list[i].tondong}</td>
+                     <td><p id="doanhthu"></p>${list[i].doanhthu}</td>
+                     <td><i style="cursor: pointer" class="glyphicon glyphicon-edit"onclick ="editted(${i})"</i></td>
+                    <td> <button onclick="calculator(${i})"> Tính Toán</button></td>
+                    <td id="chuthich${i}"><i style="cursor: pointer" class="glyphicon glyphicon-user" onclick="notemonney(${i})"></i> </td>
+                    </tr>`
+
+        }
+        document.getElementById('baocao').innerHTML = tt;
+    }
+
+
+</script>
+<p id="addnewtab"></p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+button{
+    background-color: pink;
+    border-radius: 80px;
+    cursor: pointer;
+}
+table {
+
+}
+
+caption {
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 80px;
+;
+}
+#b1{
+    width: 1200px;
+    float: left;
+
+}
+#profile{
+    width: 800px;
+    height: 800px;
+    margin-left: 650px;
+    padding-top: 200px;
+}
+h3{
+   font-size: 14px;
+    
+}
+td{
+   color: white;
+}
+h4:hover {
+    color: #D34836;
+}
+p:hover{
+    color: aqua;
+}
+button:hover{
+    background-color: gold;
+}
+#date {
+    font-family: sans-serif;
+}
+#no1{
+    font-family: Arial;
+}
+#no2{
+    font-family: Arial;
+}
+.imgg{
+    cursor: pointer;
+}
+p{
+    cursor: pointer;
+}
+h4{
+    cursor: pointer;
+}
+#date {
+    color: yellow;
+}
